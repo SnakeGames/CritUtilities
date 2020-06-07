@@ -21,7 +21,7 @@ module.exports = {
         );
       }
       let question = message.content.split(' ').splice(2)
-        .join("");
+        .join(" ");
       if (!question)
         return message.channel.send(`You did not specify your question!`);
       const Embed = new Discord.MessageEmbed()
@@ -30,9 +30,10 @@ module.exports = {
         .setFooter(`${message.author.username} created this poll.`)
         .setColor(`RANDOM`);
       let msg = await bot.channels.cache.get(channel.id).send(Embed);
-      await msg.react("👍");
-      await msg.react("👎");
       await bot.channels.cache.get(channel.id).send('@everyone **24 HOURS**')
+      await bot.channels.cache.get(channel.id).send('First to 5 wins!')
+      await msg.react("✅");
+      await msg.react("❌");
     },
   };
 

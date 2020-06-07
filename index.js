@@ -6,7 +6,7 @@ const bot = new Discord.Client({disableEveryone: true});
 
 
 bot.on('ready', () => {
-  bot.user.setActivity("everything within CritMC", { type: 'WATCHING' })
+  bot.user.setActivity("for '.' ", { type: 'WATCHING' })
   console.log('ready!')
 })
 

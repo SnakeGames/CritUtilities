@@ -19,6 +19,6 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.config = {
-    name: "userinfo",
-    aliases: ["ui", "userinfo"]
+    name: ".userinfo",
+    aliases: [".ui", ".userinfo"]
   }
