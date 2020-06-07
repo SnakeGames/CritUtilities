@@ -28,7 +28,7 @@ module.exports = {
         .setTitle(`New poll!`)
         .setDescription(`${question}`)
         .setFooter(`${message.author.username} created this poll.`)
-        .setColor(`RANDOM`);
+        .setColor(embedcolors.GREEN);
       let msg = await bot.channels.cache.get(channel.id).send(Embed);
       await bot.channels.cache.get(channel.id).send('@everyone **24 HOURS**')
       await bot.channels.cache.get(channel.id).send('First to 5 wins!')

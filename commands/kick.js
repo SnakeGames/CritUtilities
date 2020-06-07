@@ -44,7 +44,7 @@ module.exports={
           .setFooter('Bot Created by | SnakeGames#1437`, bot.user.displayAvatarURL()')
           .setColor(embedcolors.DARK_GREEN);
         message.channel.send(Embed);
-    
+
     }
 }
 

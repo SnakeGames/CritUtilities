@@ -6,19 +6,18 @@ const moment = require("moment");
 module.exports.run = async (bot, message, args) => {
     let sEmbed = new Discord.MessageEmbed()
     .setColor(embedcolors.GREEN)
-    .setTitle("User Information")
-    .setThumbnail(message.author.displayAvatarURL())
-    .setAuthor(`${message.author.username} Info`)
+    .setTitle("RELEASED")
+    .setDescription("Join our server <changeiplater>")
     .addFields(
-        {name: '**Username**', value: `${message.author.username}`},
-        {name: '**Status**', value: `${message.author.presence.status}`},
-        {name: '**Account Created**', value: `${moment(message.author.createdAt).format('MMMM Do YYYY, h:mm a [(EST)]')}`,}
+        {name: 'VERSIONS WE SUPPORT', value: '`1.8x`'}
     )
     .setFooter(`Bot Created by | SnakeGames#1437`, bot.user.displayAvatarURL());
     message.channel.send({embed: sEmbed});
+    message.channel.send('@everyone');
 }
 
+
 module.exports.config = {
-    name: "userinfo",
-    aliases: ["ui", "userinfo"]
-  }
+  name: "release",
+  aliases: ["release"]
+}

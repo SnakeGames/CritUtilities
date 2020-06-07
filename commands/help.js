@@ -6,19 +6,17 @@ const moment = require("moment");
 module.exports.run = async (bot, message, args) => {
     let sEmbed = new Discord.MessageEmbed()
     .setColor(embedcolors.GREEN)
-    .setTitle("User Information")
-    .setThumbnail(message.author.displayAvatarURL())
-    .setAuthor(`${message.author.username} Info`)
+    .setTitle("All Available Commands")
+    .setDescription("My prefix is: .")
     .addFields(
-        {name: '**Username**', value: `${message.author.username}`},
-        {name: '**Status**', value: `${message.author.presence.status}`},
-        {name: '**Account Created**', value: `${moment(message.author.createdAt).format('MMMM Do YYYY, h:mm a [(EST)]')}`,}
+        {name: 'User Commands', value: '`ip` `ui` `si` (more to come soon!)'},
+        {name: 'Moderation Commands', value: '`warn` `kick` `ban` (you cant use these as a member`'}, 
     )
     .setFooter(`Bot Created by | SnakeGames#1437`, bot.user.displayAvatarURL());
     message.channel.send({embed: sEmbed});
 }
 
 module.exports.config = {
-    name: "userinfo",
-    aliases: ["ui", "userinfo"]
+    name: "help",
+    aliases: ["help"]
   }
